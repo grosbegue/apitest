@@ -11,7 +11,7 @@ class Background extends Component {
   componentDidMount() {
     fetch("http://randomuser.me/api/?results=500")
       .then(results => {
-        return results.json;
+        return results.json();
       })
       .then(data => {
         let pictures = data.results.map(pic => {
